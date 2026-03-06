@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0; 
+}
+
+/* BARRA SUPERIOR - Ajusté el color a negro sólido para el contraste que pediste */
+.top-bar {
+    background-color: #00000091; 
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.top-bar h1 {
+    color: #ffffff; 
+    font-size: 1.4rem;
+    letter-spacing: 6px;
+    font-weight: 300;
+}
+
+/* CENTRADO DE RECUADROS */
+.container-center {
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding-top: 70px; 
+}
+
+.box-wrapper {
+    display: flex;
+    gap: 30px; 
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* LOS RECUADROS */
+.perfume-box {
+    flex: 1;
+    height: 400px; 
+    background-color: #fff;
+    text-decoration: none;
+    position: relative;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.623);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.perfume-box:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* AJUSTE DE IMÁGENES PARA QUE SE VEAN IGUALES */
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-size: cover;      /* ESTO HACE QUE LA FOTO LLENE EL CUADRO */
+    background-position: center;  /* ESTO CENTRA LA FOTO */
+    background-repeat: no-repeat;
+    transition: filter 0.3s, transform 0.5s ease;
+}
+
+/* TUS IMÁGENES */
+.arabe { 
+    background-image: url('https://m.media-amazon.com/images/I/517osb7EQnL._SL1500_.jpg'); 
+}
+
+.disenador { 
+    background-image: url('https://dimg.dillards.com/is/image/DillardsZoom/zoom/jean-paul-gaultier-le-male-elixir-parfum/00000000_zi_20410183.jpg'); 
+}
+
+.nicho { 
+    background-image: url('https://n.nordstrommedia.com/it/f40de9fe-9549-4d3a-b23f-ab71719bf79b.jpeg?crop=pad&w=780&h=1196&dpr=2'); 
+}
+
+.perfume-box:hover .image-placeholder {
+    filter: brightness(1.2); 
+    transform: scale(1.1); 
+}
+
+.box-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    z-index: 2; /* Para que siempre esté arriba de la imagen */
+}
+
+/* RESPONSIVE (MÓVIL) */
+@media (max-width: 768px) {
+    .box-wrapper {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+    .perfume-box {
+        height: 250px;
+    }
+    .container-center {
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+}
