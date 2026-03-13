@@ -31,11 +31,12 @@ body {
 
 /* CENTRADO DE RECUADROS */
 .container-center {
-    height: 100vh;
+    min-height: 100vh; 
     display: flex;
     align-items: center; 
     justify-content: center; 
-    padding-top: 70px; 
+    padding-top: 90px;
+    padding-bottom: 40px; 
 }
 
 .box-wrapper {
