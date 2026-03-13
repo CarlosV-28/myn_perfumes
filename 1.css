@@ -121,3 +121,23 @@ body {
         padding-bottom: 50px;
     }
 }
+@media (max-width: 768px) {
+    .container-center {
+        padding-top: 100px; 
+        height: auto; 
+        min-height: 100vh;
+    }
+
+    .box-wrapper {
+        flex-direction: column; 
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .perfume-box {
+        width: 90%; 
+        flex: none;
+        height: 300px; 
+    }
+}
