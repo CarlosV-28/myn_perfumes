@@ -1,511 +1,114 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfumes Árabes | MYN_PERFUMES</title>
-    <link rel="stylesheet" href="arabe.css">
-</head>
-<body>
+/* FONDO Y BARRA GRIS PASTEL */
+body {
+    background-color: #f8f9fa; /* Un gris muy suave de fondo */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
 
-    <nav class="top-bar-new">
-        <div class="nav-container">
-            <div class="brand-name">MYN_PERFUMES</div>
-            <a href="1.html" class="btn-back-small">INICIO</a>
-        </div>
-    </nav>
+.top-bar-new {
+    background-color: #e9ecef; /* Gris pastel que contrasta suave */
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    z-index: 1000;
+}
 
-    <div class="catalog-wrapper">
-        <header class="catalog-header">
-            <h2>COLECCIÓN ÁRABE</h2>
-        </header>
+.nav-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        <div class="perfume-grid-4">
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://cdn.notinoimg.com/detail_main_lq/lattafa/6291108737194_01-o/khamrah___220926.jpg" alt="Khamrah">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">LATTAFA</span>
-                    <h3>KHAMRAH</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
+.brand-name {
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/LattafaKhamrahQahwa100ml.png?v=1711580291" alt="Khamrah Qahwa">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">LATTAFA</span>
-                    <h3>KHAMRAH QAHWA</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
+/* BOTÓN PEQUEÑO */
+.btn-back-small {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
 
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/LattafaKhamrahDukhan100ml_1648f60b-3128-4c88-b1c5-cb26114146ac.png?v=1757956866" alt="Khamrah Dukhan">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">LATTAFA</span>
-                    <h3>KHAMRAH DUKHAN</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
+/* CUADRÍCULA DE 4 COLUMNAS (RECUADROS) */
+.catalog-wrapper {
+    padding-top: 90px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://fimgs.net/mdimg/perfume/o.72821.jpg" alt="Asad">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">LATTAFA</span>
-                    <h3>ASAD</h3>
-                    <p class="price">$25.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
+.perfume-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas exactas */
+    gap: 20px;
+    padding: 20px;
+}
 
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.101124.jpg" alt="Asad Bourbon"></div>
-                <div class="product-detail">
-                    <span class="brand-label">LATTAFA</span>
-                    <h3>ASAD BOURBON</h3>
-                    <p class="price">$25.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
+/* EL RECUADRO QUE TE GUSTABA */
+.perfume-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
 
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://perfumes.ec/cdn/shop/files/LattafaAsadZanzibar100ml.png?v=1711410187" alt="Asad Zanzibar"></div>
-                <div class="product-detail">
-                    <span class="brand-label">LATTAFA</span>
-                    <h3>ASAD ZANZIBAR</h3>
-                    <p class="price">$25.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
+.perfume-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
 
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://perfumes.ec/cdn/shop/files/LattafaArtOfUniverse100ml_cdcabcb3-f7fa-4f27-be5c-206247a19420.png?v=1758036525" alt="Art of Universe"></div>
-                <div class="product-detail">
-                    <span class="brand-label">LATTAFA</span>
-                    <h3>ART OF UNIVERSE</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
+.product-img img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
 
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://acdn-us.mitiendanube.com/stores/001/071/596/products/s-l1200-copia-a9bb9f3ab8c191444117347998956409-640-0.webp" alt="His Confession"></div>
-                <div class="product-detail">
-                    <span class="brand-label">LATTAFA</span>
-                    <h3>HIS CONFESSION</h3>
-                    <p class="price">$34.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
+.brand-label {
+    font-size: 0.6rem;
+    color: #888;
+    display: block;
+    margin-top: 10px;
+}
 
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPIEtMth8IYCbWtmIAZamBIwP-ZEdvG0Rtsw&s" alt="The Kingdom"></div>
-                <div class="product-detail">
-                    <span class="brand-label">LATTAFA</span>
-                    <h3>THE KINGDOM</h3>
-                    <p class="price">$34.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
+.product-detail h3 {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #222;
+}
 
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://perfumes.ec/cdn/shop/files/BhararaKing100ml_95ca3c4c-8c2b-4928-a5c9-ba95f6eda40a.png?v=1718903060" alt="BHARARA KING"></div>
-                <div class="product-detail">
-                    <span class="brand-label">BAHARARA</span>
-                    <h3>BHARARA KING</h3>
-                    <p class="price">$34.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
+.price {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://perfumes.ec/cdn/shop/files/BhararaBleu100ml_de2c280d-282c-4c02-ad89-4e9378ae072f.png?v=1718904918" alt="BHARARA BLEU"></div>
-                <div class="product-detail">
-                    <span class="brand-label">BAHARARA</span>
-                    <h3>BHARARA BLEU</h3>
-                    <p class="price">$34.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
+.btn-wa {
+    background: #000;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    border-radius: 3px;
+}
 
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://perfumes.ec/cdn/shop/files/BhararaChocolate100ml_87e17943-3485-4298-87f7-1740d409732f.png?v=1750286990" alt="BAHARARA CHOCOLATE"></div>
-                <div class="product-detail">
-                    <span class="brand-label">BAHARARA</span>
-                    <h3>BAHARARA CHOCOLATE</h3>
-                    <p class="price">$34.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://perfumes.ec/cdn/shop/files/ArmafOdysseyMandarinSky100ml.png?v=1698954027" alt="Mandaryn sky"></div>
-                <div class="product-detail">
-                    <span class="brand-label">ARMAF</span>
-                    <h3>MANDARYN SKY</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://perfumes.ec/cdn/shop/files/ArmafOdysseyAquaEdition100ml.png?v=1698951379" alt="Odyssey Aqua"></div>
-                <div class="product-detail">
-                    <span class="brand-label">ARMAF</span>
-                    <h3>ODYSSEY AQUA</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://perfumes.ec/cdn/shop/files/ArmafOdysseyMega100ml.png?v=1721589528" alt="Odyssey MEGA"></div>
-                <div class="product-detail">
-                    <span class="brand-label">ARMAF</span>
-                    <h3>ODYSSEY MEGA</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://perfumes.ec/cdn/shop/files/ArmafOdysseyLimoniFresh100ml_9ce5c10e-acb0-4288-af99-7a3ef17dfeae.jpg?v=1748650551" alt="Odyssey Limoni"></div>
-                <div class="product-detail">
-                    <span class="brand-label">LATTAFA</span>
-                    <h3>ODYSSEY LIMONI</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://perfumes.ec/cdn/shop/files/ArmafOdysseyArtisto100ml_3ca2c9ff-e328-43d1-bb62-824edd71f5c5.jpg?v=1749327151" alt="ODYSSEY ARTISTO"></div>
-                <div class="product-detail">
-                    <span class="brand-label">ARMAF</span>
-                    <h3>ODYSSEY ARTISTO</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://m.media-amazon.com/images/I/61YAUQAtzmL.jpg" alt="ODYSSEY HOMME WHITE"></div>
-                <div class="product-detail">
-                    <span class="brand-label">ARMAF</span>
-                    <h3>ODYSSEY HOMME WHITE</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img"><img src="https://perfumes.ec/cdn/shop/files/ArmafClubDeNuitIntenseMan150ml.png?v=1700769337" alt="ODYSSEY CLUB DE NUIT"></div>
-                <div class="product-detail">
-                    <span class="brand-label">ARMAF</span>
-                    <h3>CLUB DE NUIT</h3>
-                    <p class="price">$32.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://m.media-amazon.com/images/I/71YBbNYcr7L._SL1000_.jpg" alt="Club de Nuit Urban">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">ARMAF</span>
-                    <h3>CLUB DE NUIT URBAN MAN ELIXIR</h3>
-                    <p class="price">$32.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://m.media-amazon.com/images/I/61hDO6ICiyL._SL1500_.jpg" alt="Hawas Ice">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">RASASI</span>
-                    <h3>HAWAS ICE</h3>
-                    <p class="price">$29.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/RasasiHawasFire100ml_cc8a86c3-7efb-4a28-98e5-207d65a2b2f6.png?v=1758946663" alt="Hawas fire">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">RASASI</span>
-                    <h3>HAWAS FIRE</h3>
-                    <p class="price">$29.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/RasasiHawasMalibu100ml_475c6c7e-f01c-4037-8fdf-9206bdf41e34.png?v=1758947639" alt="Hawas Malibu">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">RASASI</span>
-                    <h3>HAWAS MALIBU</h3>
-                    <p class="price">$29.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/Rasasi_Hawas_Tropical_100ml_7810719f-1344-4312-a467-6c4f49d113f8.png?v=1758948146" alt="Hawas Tropical">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">RASASI</span>
-                    <h3>HAWAS TROPICAL</h3>
-                    <p class="price">$29.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.117625.jpg" alt="Hawas Verde">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">RASASI</span>
-                    <h3>HAWAS VERDE</h3>
-                    <p class="price">$29.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://m.media-amazon.com/images/I/710Vlpz4hcL._SL1000_.jpg" alt="Hawas Atlantis">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">RASASI</span>
-                    <h3>HAWAS ATLANTIS</h3>
-                    <p class="price">$29.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/RasasiHawasKobra100ml_83574daa-94f9-4478-a764-54cf7a359d34.png?v=1758947153" alt="Hawas KOBRA">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">RASASI</span>
-                    <h3>HAWAS KOBRA</h3>
-                    <p class="price">$29.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://m.media-amazon.com/images/I/51h+3KRCLiL._AC_UF1000,1000_QL80_.jpg" alt="Hawas for Him">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">RASASI</span>
-                    <h3>HAWAS FOR HIM</h3>
-                    <p class="price">$29.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/RasasiHawasElixir100ml_28a75390-cd29-46e8-8d88-cdea193d598b.png?v=1758945804" alt="Hawas Elixir">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">RASASI</span>
-                    <h3>HAWAS ELIXIR</h3>
-                    <p class="price">$29.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/Dumont_Nitro_Red_100ml.png?v=1762099585" alt="Nitro Red">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">DUMONT</span>
-                    <h3>NITRO RED</h3>
-                    <p class="price">$28.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/Afnan9pm100ml.png?v=1701977583" alt="9 pm">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">AFNAN</span>
-                    <h3>9PM </h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.111894.jpg" alt="9pm Elixir">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">AFNAN</span>
-                    <h3>9PM ELIXIR</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/Afnan9pmRebel100ml_d72d4010-f349-4dbb-ad63-8cfc6ce14fc2.jpg?v=1742393262" alt="9pm Rebel">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">AFNAN</span>
-                    <h3>9PM REBEL</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/Afnan9amDive100ml.png?v=1701979572" alt="9 am">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">AFNAN</span>
-                    <h3>9AM DIVE</h3>
-                    <p class="price">$30.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/GameOfSpadesWildcard100ml_33445510-fa75-43d6-9e9a-1f196489484c.png?v=1757127214" alt="Game of spades Wildcard">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">JO MILANO PARIS</span>
-                    <h3>GAME OF SPADES WILDCARD</h3>
-                    <p class="price">$34.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://acdn-us.mitiendanube.com/stores/001/071/596/products/s-l1200-1-copia-f6bf44be5aa69db01217372043600572-640-0.webp" alt="game of spades full house">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">JO MILANO PARIS</span>
-                    <h3>GAME OF SPADES FULL HOUSE</h3>
-                    <p class="price">$34.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/GameOfSpadesRoyale100ml_45c8762e-02f4-4f69-84dc-ab29941b3c11.png?v=1757125933" alt="GAME OF SPADES ROYALE">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">JO MILANO PARIS</span>
-                    <h3>GAME OF SPADES ROYALE</h3>
-                    <p class="price">$34.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://perfumes.ec/cdn/shop/files/GameOfSpadesMoon100ml.png?v=1757124567" alt="Game of spades Moon">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">JO MILANO PARIS</span>
-                    <h3>GAME OF SPADES MOON</h3>
-                    <p class="price">$34.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.94713.jpg" alt="Liquid Brun">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">FRENCH AVENEU</span>
-                    <h3>LIQUID BRUN</h3> 
-                    <p class="price">$32.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.94022.jpg" alt="Royal Blend">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">FRENCH AVENEU</span>
-                    <h3>ROYAL BLEND</h3>
-                    <p class="price">$34.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://aromatica.one/cdn/shop/files/Generated-Image-January-12-2026-11_26PM.jpg?v=1773945569" alt="Royal Blend Nero">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">FRENCH AVENEU</span>
-                    <h3>ROYAL BLEND NERO</h3>
-                    <p class="price">$34.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.105520.jpg" alt="Vulcan Feu">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">FRENCH AVENEU</span>
-                    <h3>VULCAN FEU</h3>
-                    <p class="price">$32.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-            <div class="perfume-card">
-                <div class="product-img">
-                    <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.105521.jpg" alt="Vulcan Sable">
-                </div>
-                <div class="product-detail">
-                    <span class="brand-label">FRENCH AVENEU</span>
-                    <h3>VULCAN SABLE</h3>
-                    <p class="price">$32.00</p>
-                    <a href="https://wa.link/rvsmlr" class="btn-wa">WHATSAPP</a>
-                </div>
-            </div>
-
-        </div> </div> </body>
-</html>
+/* MÓVIL: De 2 en 2 */
+@media (max-width: 768px) {
+    .perfume-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
